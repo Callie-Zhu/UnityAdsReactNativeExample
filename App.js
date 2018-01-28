@@ -32,8 +32,7 @@ export default class App extends Component<{}> {
         }
 
     componentDidMount() {
-        // UnityAds.init('YOUR_GAME_ID');
-        UnityAds.initialize('1546809');
+       Platform.OS === 'android' ? UnityAds.initialize('AndroidGameID') : UnityAds.initialize('iOSGameID');
 
         this._updateDefaultPlacementState();
         
